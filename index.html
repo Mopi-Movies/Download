@@ -5,182 +5,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mopi Movies - Latest HD Movies</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
 
-    header {
-      background-color: #1f1f1f;
-      padding: 1rem 1.5rem;
-      text-align: center;
-      position: relative;
-    }
+  header {
+    background-color: #1f1f1f;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    position: relative;
+  }
 
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ff3c3c;
+    font-weight: bold;
+  }
+
+  header p {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #ddd;
+  }
+
+  /* Navigation Styles */
+  nav {
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav.open {
+    display: flex; /* Show the menu when it's toggled */
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1rem;
+  }
+
+  nav a:hover {
+    background-color: #ff3c3c;
+    transform: scale(1.05);
+  }
+
+  /* Button for mobile view to toggle menu */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it's on top */
+    transition: transform 0.3s ease;
+  }
+
+  .nav-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  /* Movie card styles */
+  .container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Will adjust automatically */
+    gap: 1.5rem;
+    margin-top: 4rem; /* To avoid the nav menu being hidden behind the content */
+  }
+
+  .movie-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 60, 60, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Make the whole card clickable */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .movie-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 60, 60, 0.5);
+  }
+
+  .movie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .movie-card h2 {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    margin: 0;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .movie-card a {
+    display: block;
+    text-decoration: none;
+    color: #ff3c3c;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background-color: #333;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile View */
+  @media (max-width: 600px) {
     header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #ff3c3c;
-      font-weight: bold;
+      font-size: 1.6rem; /* Smaller header size */
     }
 
     header p {
-      margin-top: 0.3rem;
-      font-size: 1rem;
-      color: #ddd;
+      font-size: 0.9rem;
     }
 
-    /* Navigation Styles */
     nav {
-      background-color: #2b2b2b;
-      display: flex;
-      justify-content: center;
+      display: none; /* Hide by default */
       flex-direction: column;
       align-items: center;
-      gap: 0.8rem;
-      padding: 1rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      display: none;
-      transition: all 0.3s ease-in-out;
+      gap: 0.5rem;
     }
 
     nav.open {
       display: flex; /* Show the menu when it's toggled */
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background 0.3s, transform 0.3s;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      background-color: #ff3c3c;
-      transform: scale(1.05);
-    }
-
-    /* Button for mobile view to toggle menu */
-    .nav-toggle {
-      display: block;
-      position: absolute;
-      top: 1.2rem;
-      right: 1.2rem;
-      background-color: transparent;
-      color: #fff;
-      border: none;
-      font-size: 2.2rem;
-      cursor: pointer;
-      z-index: 10000; /* Ensure it's on top */
-      transition: transform 0.3s ease;
-    }
-
-    .nav-toggle:hover {
-      transform: scale(1.1);
-    }
-
-    /* Movie card styles */
-    .container {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.2rem;
-      margin-top: 4rem; /* To avoid the nav menu being hidden behind the content */
-    }
-
-    .movie-card {
-      background-color: #222;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(255, 60, 60, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .movie-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(255, 60, 60, 0.5);
-    }
-
     .movie-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+      height: 180px; /* Reduce image height */
     }
 
-    .movie-card h2 {
-      font-size: 1.1rem;
-      padding: 0.6rem;
-      margin: 0;
-      color: #fff;
-      background-color: #333;
-      text-align: center;
-    }
-
-    .movie-card a {
-      display: block;
-      text-decoration: none;
-      color: #ff3c3c;
-      font-weight: bold;
-      padding: 0 0.8rem 1rem;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
+    .container {
       padding: 1rem;
-      background-color: #1f1f1f;
-      color: #888;
-      font-size: 0.9rem;
+      grid-template-columns: 1fr; /* 1 movie per row on small screens */
+      gap: 1rem;
     }
-
-    /* Mobile View */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem; /* Smaller header size */
-      }
-
-      header p {
-        font-size: 0.9rem;
-      }
-
-      nav {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      nav.open {
-        display: flex; /* Show the menu when it's toggled */
-      }
-
-      .nav-toggle {
-    font-size: 1.8rem; /* Reduced size for the toggle button */
-    padding: 0.4rem; /* Optional: Adjust the padding for a smaller button */
   }
-}
+</style>
 
-      .movie-card img {
-        height: 200px; /* Reduce image height */
-      }
-
-      .container {
-        padding: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller grid items */
-        gap: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
