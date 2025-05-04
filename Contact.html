@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Mopi Movies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
 
+  header {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ff3c3c;
+  }
+
+  header p {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #ddd;
+  }
+
+  .container {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 3rem auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 60, 60, 0.3);
+    border: 1px solid #333;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ff3c3c;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #ff3c3c;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  .form-group button {
+    background-color: #ff3c3c;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background 0.3s;
+  }
+
+  .form-group button:hover {
+    background-color: #ff5c5c;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    header p {
+      font-size: 0.9rem;
+    }
+
+    .container {
+      padding: 2rem 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem;
+    }
+
+    .form-group button {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <header>
+    <h1>Mopi Movies</h1>
+    <p>Contact Us</p>
+  </header>
+
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <form action="submit_form.php" method="POST">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+      </div>
+
+      <!-- Subject -->
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="Enter subject" />
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 Mopi Movies. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
