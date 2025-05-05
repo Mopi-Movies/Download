@@ -1,34 +1,9 @@
 {
   "movies": [
     {
-      "title": "Puspha Movie",
-      "image": "https://i.ibb.co/TDqjHqFx/download.jpg",
+      "title": "Kuberaa Glimpse",
+      "image": "https://i.ibb.co/nsH9DK8w/download.jpg",
       "url": "https://timenow.pk/"
-    },
-    {
-      "title": "Action Man 2",
-      "image": "https://i.ibb.co/rj8ZQx6/download.jpg",
-      "url": "https://mopiabbasi.github.io/blog/Action-Man-2"
-    },
-    {
-      "title": "Pk Full Movie ",
-      "image": "https://i.ibb.co/wFzNP68W/download.jpg",
-      "url": "https://mopiabbasi.github.io/blog/Superhero-League"
-    },
-    {
-      "title": "Testing",
-      "image": "https://i.ibb.co/rj8ZQx6/download.jpg",
-      "url": "https://mopiabbasi.github.io/blog/Cute-buduguard"
-    },
-    {
-      "title": "Action Man 2",
-      "image": "https://i.ibb.co/1tYkLd6k/cute-animals-everwhere-1571476995-2158027907327695209-9717354926.jpg",
-      "url": "https://mopiabbasi.github.io/blog/Action-Man-2"
-    },
-    {
-      "title": "Superhero League",
-      "image": "https://i.ibb.co/1tYkLd6k/cute-animals-everwhere-1571476995-2158027907327695209-9717354926.jpg",
-      "url": "https://mopiabbasi.github.io/blog/Superhero-League"
     }
   ]
 }
